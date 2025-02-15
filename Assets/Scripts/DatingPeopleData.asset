@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e008fcef0915240b7a04617bcf440bc7, type: 3}
   m_Name: DatingPeopleData
   m_EditorClassIdentifier: 
-  ProfileName: 
-  Age: 0
-  Bio: 
-  MilesAway: 0
-  ProfilePicture: {fileID: 0}
+  ProfileName: Shmoopy
+  Age: 21
+  Bio: meow meow meow meow
+  MilesAway: 1
+  ProfilePicture: {fileID: 21300000, guid: 2d7428a8cf7e8824a9ac285e840ea013, type: 3}
