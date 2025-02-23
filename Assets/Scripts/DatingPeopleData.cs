@@ -4,16 +4,16 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "DatingPeopleData", menuName = "Scriptable Objects/DatingPeopleData")]
 public class DatingPeopleData : ScriptableObject
 {
-    public string ProfileName;
+    public string Name;
     public int Age;
     [TextArea(2,6)]
     public string Bio;
-    public float MilesAway;
+    public int Distance;
     public Sprite ProfilePicture;
 
     public string GetName()
     {
-        return ProfileName;
+        return Name;
     }
 
     public int GetAge()
@@ -26,9 +26,9 @@ public class DatingPeopleData : ScriptableObject
         return Bio;
     }
 
-    public float GetMilesAway()
+    public float GetDistance()
     {
-        return MilesAway;
+        return Distance;
     }
 
     public Sprite GetProfilePicture()

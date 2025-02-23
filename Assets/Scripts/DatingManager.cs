@@ -2,77 +2,70 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class DatingAppManager : MonoBehaviour
 {
 
     // General App
-    public GameObject ProfileScreen;
-    public GameObject MessagesScreen;
-    public GameObject LikesScreen;
-    public GameObject PeopleScreen;
+    public GameObject ProfilePage;
+    public GameObject MessagesPage;
+    public GameObject LikesPage;
+    public GameObject PeoplePage;
 
     public Button ProfileButton;
     public Button MessagesButton;
     public Button LikesButton;
     public Button PeopleButton;
 
+    List<Button> PageButtons = new List<Button>();
+    List<GameObject> Pages = new List<GameObject>();
+
     //Profile Screen
-    public Button LikeButton;
+    PersonProfile profile;
+    public Button HeartButton;
     public Button SkipButton;
    
     void Start()
     {
-        
+        PageButtons.Add(ProfileButton); PageButtons.Add(MessagesButton); PageButtons.Add(LikesButton); PageButtons.Add(PeopleButton);
+        Pages.Add(ProfilePage); Pages.Add(MessagesPage); Pages.Add(LikesPage); Pages.Add(PeoplePage);
+
+        ProfileButton.onClick.AddListener(() => ChangePage(ProfileButton));
+        MessagesButton.onClick.AddListener(() => ChangePage(MessagesButton));
+        LikesButton.onClick.AddListener(() => ChangePage(LikesButton));
+        PeopleButton.onClick.AddListener(() => ChangePage(PeopleButton));
+        HeartButton.onClick.AddListener(() => NextProfile());
+        SkipButton.onClick.AddListener(() => NextProfile());
     }
 
     void Update()
     {
-        
+
     }
 
-    private void OnEnable()
+    void ChangePage(Button buttonClicked)
     {
-        ProfileButton.onClick.AddListener(() => ScreenButtonClicked(ProfileButton));
-        MessagesButton.onClick.AddListener(() => ScreenButtonClicked(MessagesButton));
-        LikesButton.onClick.AddListener(() => ScreenButtonClicked(LikesButton));
-        PeopleButton.onClick.AddListener(() => ScreenButtonClicked(PeopleButton));
-        LikeButton.onClick.AddListener(() => NextProfile());
-        SkipButton.onClick.AddListener(() => NextProfile());
-    }
-
-    void ScreenButtonClicked(Button buttonClicked)
-    {
-        if (buttonClicked == ProfileButton)
-        {
-            ProfileScreen.SetActive(true);
-            MessagesScreen.SetActive(false);
-            LikesScreen.SetActive(false);
-            PeopleScreen.SetActive(false);
-        } else if (buttonClicked == MessagesButton)
-        {
-            ProfileScreen.SetActive(false);
-            MessagesScreen.SetActive(true);
-            LikesScreen.SetActive(false);
-            PeopleScreen.SetActive(false);
-        } else if (buttonClicked == LikesButton)
-        {
-            ProfileScreen.SetActive(false);
-            MessagesScreen.SetActive(false);
-            LikesScreen.SetActive(true);
-            PeopleScreen.SetActive(false);
-        } else if (buttonClicked == PeopleButton)
-        {
-            ProfileScreen.SetActive(false);
-            MessagesScreen.SetActive(false);
-            LikesScreen.SetActive(false);
-            PeopleScreen.SetActive(true);
+        for (int i = 0; i < PageButtons.Count; i++) {
+            if (buttonClicked == PageButtons[i]) 
+            {
+                Pages[i].SetActive(true);
+            } else {
+                Pages[i].SetActive(false);
+            }
         }
     }
 
+    // Profile Page 
     private void NextProfile()
     {
-
+        if ("HeartButton" == EventSystem.current.currentSelectedGameObject.name) 
+        {
+            profile.GetNextProfile();
+        } else if ("SkipButton" == EventSystem.current.currentSelectedGameObject.name)
+        {
+            profile.GetNextProfile();
+        }
     }
 }
 

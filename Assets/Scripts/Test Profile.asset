@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e008fcef0915240b7a04617bcf440bc7, type: 3}
-  m_Name: DatingPeopleData
+  m_Name: Test Profile
   m_EditorClassIdentifier: 
   ProfileName: Shmoopy
   Age: 21
