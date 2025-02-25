@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "DatingPeopleData", menuName = "Scriptable Objects/DatingPeopleData")]
+[CreateAssetMenu(fileName = "Profile", menuName = "ScriptableObjects/Profiles")]
 public class DatingPeopleData : ScriptableObject
 {
     public string Name;

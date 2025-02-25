@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e008fcef0915240b7a04617bcf440bc7, type: 3}
   m_Name: Test Profile
   m_EditorClassIdentifier: 
-  ProfileName: Shmoopy
+  Name: Shmoopy
   Age: 21
   Bio: meow meow meow meow
-  MilesAway: 1
+  Distance: 0
   ProfilePicture: {fileID: 21300000, guid: 2d7428a8cf7e8824a9ac285e840ea013, type: 3}

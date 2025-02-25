@@ -14,15 +14,25 @@ public class PersonProfile : MonoBehaviour
     [SerializeField] Image ProfilePicture;
     [SerializeField] TMP_Text Distance;
     [SerializeField] TMP_Text Bio;
+
+
+    [SerializeField] GameObject NameAgeObject;
+    [SerializeField] GameObject ProfilePictureObject;
+    [SerializeField] GameObject DistanceObject;
+    [SerializeField] GameObject BioObject;
     
     DatingPeopleData currentProfile;
 
     void Awake()
     {
-        NameAge = GetComponent<TMP_Text>();
-        ProfilePicture = GetComponent<Image>();
-        Distance = GetComponent<TMP_Text>();
-        Bio = GetComponent<TMP_Text>();
+        NameAge = NameAgeObject.GetComponent<TMP_Text>();
+        ProfilePicture = ProfilePictureObject.GetComponent<Image>();
+        Distance = DistanceObject.GetComponent<TMP_Text>();
+        Bio = BioObject.GetComponent<TMP_Text>();
+        if (currentProfile == null) 
+        {
+            GetNextProfile();
+        }
     }
 
     
@@ -31,9 +41,12 @@ public class PersonProfile : MonoBehaviour
         
     }
 
-    void DisplayProfile(DatingPeopleData currentProfile)
+    public void DisplayProfile()
     {
         NameAge.text = $"<b>{currentProfile.Name}</b>" + " " + $"{currentProfile.Age}";
+        ProfilePicture.sprite = currentProfile.ProfilePicture;
+        Distance.text = $"{currentProfile.Distance}" + " " + "mi";
+        Bio.text = $"{currentProfile.Bio}";
     }
 
     public void GetNextProfile()
@@ -47,5 +60,6 @@ public class PersonProfile : MonoBehaviour
                 profiles.Remove(currentProfile);
             }
         }
+        DisplayProfile();
     }
 }
