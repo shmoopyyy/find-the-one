@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e008fcef0915240b7a04617bcf440bc7, type: 3}
   m_Name: Profile2
   m_EditorClassIdentifier: 
-  Name: 
-  Age: 0
-  Bio: 
-  Distance: 0
-  ProfilePicture: {fileID: 0}
+  Name: Asher Hawke
+  Age: 23
+  Bio: iykyk if u dont, use a hoe - but i like hoes, so msg me if ya down
+  Distance: 6.9
+  ProfilePicture: {fileID: 21300000, guid: 719cd4415bf7a499b874ee8e9ec53de0, type: 3}

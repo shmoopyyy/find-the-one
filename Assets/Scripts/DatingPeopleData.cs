@@ -8,7 +8,7 @@ public class DatingPeopleData : ScriptableObject
     public int Age;
     [TextArea(2,6)]
     public string Bio;
-    public int Distance;
+    public float Distance;
     public Sprite ProfilePicture;
 
     public string GetName()
