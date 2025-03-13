@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class DatingAppManager : MonoBehaviour
 {
@@ -27,7 +28,12 @@ public class DatingAppManager : MonoBehaviour
     public PersonProfile profile;
     public Button HeartButton;
     public Button SkipButton;
-   
+
+    //Match Pop Up
+    [Header("Match Pop Up")]
+    public GameObject MatchPopUp;
+    public Button MatchClose;
+
     void Start()
     {
         profile = ProfileContainer.GetComponent<PersonProfile>();
@@ -39,8 +45,9 @@ public class DatingAppManager : MonoBehaviour
         MessagesButton.onClick.AddListener(() => ChangePage(MessagesButton));
         LikesButton.onClick.AddListener(() => ChangePage(LikesButton));
         PeopleButton.onClick.AddListener(() => ChangePage(PeopleButton));
-        HeartButton.onClick.AddListener(() => NextProfile());
-        SkipButton.onClick.AddListener(() => NextProfile());
+        HeartButton.onClick.AddListener(() => NextProfile(HeartButton));
+        SkipButton.onClick.AddListener(() => NextProfile(SkipButton));
+        MatchClose.onClick.AddListener(() => ClosePopUp());
     }
 
     void Update()
@@ -84,15 +91,22 @@ public class DatingAppManager : MonoBehaviour
     }
 
     // Profile Page 
-    private void NextProfile()
+    private void NextProfile(Button buttonClicked)
     {
-        if ("HeartButton" == EventSystem.current.currentSelectedGameObject.name) 
+        if (buttonClicked == HeartButton) 
         {
+            profile.CheckMatch();
             profile.GetNextProfile();
-        } else if ("SkipButton" == EventSystem.current.currentSelectedGameObject.name)
+        } else if (buttonClicked == SkipButton)
         {
             profile.GetNextProfile();
         }
+    }
+
+    //Match Pop Up
+    private void ClosePopUp() 
+    {
+        MatchPopUp.SetActive(false);
     }
 }
 

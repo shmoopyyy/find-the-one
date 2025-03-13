@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Collections;
 using System.Collections.Generic;
+using System;
+using Unity.VisualScripting;
 
 public class PersonProfile : MonoBehaviour
 {
@@ -15,16 +16,25 @@ public class PersonProfile : MonoBehaviour
     [SerializeField] TMP_Text Distance;
     [SerializeField] TMP_Text Bio;
 
-
     [SerializeField] GameObject NameAgeObject;
     [SerializeField] GameObject ProfilePictureObject;
     [SerializeField] GameObject DistanceObject;
     [SerializeField] GameObject BioObject;
+
+     // Match Fill-In
+    public GameObject MatchPopUp;
+    public GameObject MatchProfileIcon;
+    public GameObject MatchText;
+    public Image MatchProfilePicture;
+    public TMP_Text MatchNameText;
     
     DatingPeopleData currentProfile;
 
     void Awake()
     {
+        MatchProfilePicture = MatchProfileIcon.GetComponent<Image>();
+        MatchNameText = MatchText.GetComponent<TMP_Text>();
+
         NameAge = NameAgeObject.GetComponent<TMP_Text>();
         ProfilePicture = ProfilePictureObject.GetComponent<Image>();
         Distance = DistanceObject.GetComponent<TMP_Text>();
@@ -35,7 +45,6 @@ public class PersonProfile : MonoBehaviour
         }
     }
 
-    
     void Update()
     {
         
@@ -53,7 +62,7 @@ public class PersonProfile : MonoBehaviour
     {
         if (profiles.Count > 0)
         {
-            int index = Random.Range(0, profiles.Count);
+            int index = UnityEngine.Random.Range(0, profiles.Count);
             currentProfile = profiles[index];
             if (profiles.Contains(currentProfile))
             {
@@ -61,5 +70,24 @@ public class PersonProfile : MonoBehaviour
             }
         }
         DisplayProfile();
+    }
+
+    public void CheckMatch()
+    {
+        if (currentProfile.Match == true) 
+        {
+            ShowMatch();
+        }
+        else
+        {
+            return;
+        }
+    }
+
+        public void ShowMatch() 
+    {
+        MatchProfilePicture.sprite = currentProfile.ProfilePicture;
+        MatchNameText.text = $"You matched with {currentProfile.Name}";
+        MatchPopUp.SetActive(true);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,7 @@ public class DatingPeopleData : ScriptableObject
     public string Bio;
     public float Distance;
     public Sprite ProfilePicture;
+    public bool Match;
 
     public string GetName()
     {
@@ -34,5 +36,10 @@ public class DatingPeopleData : ScriptableObject
     public Sprite GetProfilePicture()
     {
         return ProfilePicture;
+    }
+
+    public bool GetMatchBool() 
+    {
+        return Match;
     }
 }
