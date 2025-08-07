@@ -60,6 +60,10 @@ public class DatingAppManager : MonoBehaviour
         for (int i = 0; i < PageButtons.Count; i++) {
             if (buttonClicked == PageButtons[i]) 
             {
+                if (buttonClicked == MessagesButton)
+                {
+                    
+                }
                 Pages[i].SetActive(true);
                 LoadPage(Pages[i]);
             } else {
