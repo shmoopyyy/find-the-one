@@ -11,6 +11,36 @@ ShaderVariantCollection:
   - first: {fileID: 4800000, guid: 96246b1ead49a4c5a996fd477bc5a117, type: 3}
     second:
       variants:
+      - keywords: COLOR_FILTER
+        passType: 0
+      - keywords: COLOR_FILTER DETAIL_MASKING SAMPLING_BLUR_MEDIUM
+        passType: 0
+      - keywords: COLOR_FILTER DETAIL_MULTIPLY SAMPLING_BLUR_MEDIUM
+        passType: 0
+      - keywords: COLOR_FILTER EDGE_SHINY
+        passType: 0
+      - keywords: COLOR_FILTER GRADATION_COLOR2
+        passType: 0
+      - keywords: COLOR_FILTER GRADATION_GRADIENT
+        passType: 0
+      - keywords: COLOR_FILTER SAMPLING_BLUR_DETAIL
+        passType: 0
+      - keywords: COLOR_FILTER SAMPLING_BLUR_FAST
+        passType: 0
+      - keywords: COLOR_FILTER SAMPLING_BLUR_MEDIUM
+        passType: 0
+      - keywords: COLOR_FILTER SAMPLING_EDGE_ALPHA
+        passType: 0
+      - keywords: COLOR_FILTER SAMPLING_EDGE_LUMINANCE
+        passType: 0
+      - keywords: COLOR_FILTER TONE_POSTERIZE
+        passType: 0
+      - keywords: COLOR_FILTER TONE_RETRO
+        passType: 0
+      - keywords: COLOR_FILTER TRANSITION_SHINY
+        passType: 0
+      - keywords: COLOR_FILTER UNITY_UI_ALPHACLIP
+        passType: 0
       - keywords: EDGE_COLOR_REPLACE EDGE_PLAIN
         passType: 0
       - keywords: EDGE_COLOR_REPLACE EDGE_PLAIN SAMPLING_EDGE_LUMINANCE
@@ -32,11 +62,21 @@ ShaderVariantCollection:
         passType: 0
       - keywords: SAMPLING_BLUR_FAST
         passType: 0
+      - keywords: SAMPLING_BLUR_FAST TONE_RETRO
+        passType: 0
+      - keywords: SAMPLING_BLUR_FAST TRANSITION_MASK
+        passType: 0
+      - keywords: SAMPLING_BLUR_FAST TRANSITION_SHINY
+        passType: 0
       - keywords: SAMPLING_BLUR_MEDIUM
         passType: 0
       - keywords: SAMPLING_EDGE_LUMINANCE
         passType: 0
+      - keywords: SAMPLING_PIXELATION
+        passType: 0
       - keywords: SAMPLING_RGB_SHIFT
+        passType: 0
+      - keywords: TRANSITION_SHINY
         passType: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -55,7 +95,9 @@ MonoBehaviour:
   m_UseHDRColorPicker: 1
   m_ShaderVariantCollection: {fileID: 0}
   m_ShaderVariantRegistry:
-    m_OptionalShaders: []
+    m_OptionalShaders:
+    - key: Hidden/UI/Default (SoftMaskable)
+      value: Hidden/UI/Default (UIEffect)
     m_Asset: {fileID: -9168728475143584738}
     m_ErrorOnUnregisteredVariant: 0
     m_UnregisteredVariants: []
