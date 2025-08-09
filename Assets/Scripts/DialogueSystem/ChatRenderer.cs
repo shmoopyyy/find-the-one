@@ -14,6 +14,7 @@ public class ChatRenderer : MonoBehaviour
     [Header("Header")] 
     public Image PFP;
     public TextMeshProUGUI ProfileName;
+    public Button GoBackButton;
     
     [Header("Chat Bubble Elements")]
     public ScrollRect ScrollRect;
@@ -34,6 +35,7 @@ public class ChatRenderer : MonoBehaviour
     {
         PFP.sprite = DatingPeopleData.ProfilePicture;
         ProfileName.text = DatingPeopleData.Name;
+        GoBackButton.interactable = false;
         
         ScrollRect.verticalNormalizedPosition = 0; 
         SendButtonBG.enabled = false;
@@ -120,6 +122,8 @@ public class ChatRenderer : MonoBehaviour
             
             yield return new WaitForSeconds(1);
         }
+        
+        GoBackButton.interactable = true;
     }
 
     public void OnClick()

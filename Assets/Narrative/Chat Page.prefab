@@ -1578,6 +1578,7 @@ MonoBehaviour:
   DatingPeopleData: {fileID: 11400000, guid: 2e862a74d2eb14f2e819c3bc2ae3fdc9, type: 2}
   PFP: {fileID: 8956196343969408617}
   ProfileName: {fileID: 2123446403656727520}
+  GoBackButton: {fileID: 1946889044395144915}
   ScrollRect: {fileID: 2072984090236259103}
   ChatBubblePrefab: {fileID: 2411792786386791521, guid: c413e1ace75da55428ac58acb8fea3e2, type: 3}
   ElipsisBubble: {fileID: 2371680708160040151}
@@ -1727,6 +1728,7 @@ GameObject:
   - component: {fileID: 6054917163775002352}
   - component: {fileID: 964780176396545820}
   - component: {fileID: 1946889044395144915}
+  - component: {fileID: 3962715388279308031}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1774,7 +1776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.82745105, g: 0.5019608, b: 0.5019608, a: 1}
+  m_Color: {r: 0.5943396, g: 0.19344072, b: 0.19344072, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1834,7 +1836,36 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 964780176396545820}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3962715388279308031}
+        m_TargetAssemblyTypeName: GoBackButton, Assembly-CSharp
+        m_MethodName: GoBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3962715388279308031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5445072728113157730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81781b58d21123648b31ca27018ebbdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DisableObjects:
+  - {fileID: 5178198326518565716}
+  EnableObjects:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &6710399342538041635
 GameObject:
   m_ObjectHideFlags: 0
