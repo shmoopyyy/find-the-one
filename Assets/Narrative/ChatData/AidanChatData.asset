@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c6ba62d49a91449b4010b26670cc9e, type: 3}
+  m_Name: AidanChatData
+  m_EditorClassIdentifier: 
+  ChatFile: {fileID: 4900000, guid: 26040f250d3f40e448ed224c9d136d6a, type: 3}
+  OpeningMessage: hey ;)
+  Messages:
+  - Eden: 1
+    Message: hey, how are you?
+  - Eden: 0
+    Message: ok
+  - Eden: 0
+    Message: wyd rn ;)
+  - Eden: 1
+    Message: Nothing much at the moment, what about you?
+  - Eden: 0
+    Message: just layin in bed haha, im so bored
+  - Eden: 0
+    Message: tbh im like pretty horny rn n ur soo hot lol wanna come over?

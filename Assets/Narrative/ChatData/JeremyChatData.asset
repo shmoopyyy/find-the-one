@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c6ba62d49a91449b4010b26670cc9e, type: 3}
+  m_Name: JeremyChatData
+  m_EditorClassIdentifier: 
+  ChatFile: {fileID: 4900000, guid: 1cf43586d66498f47b3dfe043de5383e, type: 3}
+  OpeningMessage: Hey there! How are you doing today?
+  Messages:
+  - Eden: 1
+    Message: "Hi! I\u2019m doing good, how about you?"
+  - Eden: 0
+    Message: "I\u2019m doing alright! Just got home after doing some light reading
+      at a cafe. I saw that you said you enjoy horror movies, do you have a favorite?"
+  - Eden: 1
+    Message: Oh yea I love horror films! I think my favorite currently is Midsommar.
+      How about you - do you like horror movies?
+  - Eden: 0
+    Message: Gotta love Ari Aster, he makes some good movies! And yes I love a good
+      horror film, not sure if I could point out a favorite though there are just
+      so many good ones.
+  - Eden: 1
+    Message: "Oh yea I totally get that, my \u201Cfavorite\u201D changes a lot but
+      I\u2019m just glad there are enough good horror films to have that kind of
+      problem! Since we\u2019re talking about things we enjoy, what do you like to
+      do for fun?"
+  - Eden: 0
+    Message: I like playing video games, exploring cafes around the city, reading,
+      and going to see concerts, musicals or other local theater stuff
+  - Eden: 1
+    Message: "Wow we seem to have a lot in common, I think we\u2019ll get along great
+      haha!"
+  - Eden: 0
+    Message: "Haha yea I think so too :) I\u2019ll be honest I think you\u2019re
+      very pretty and you seem very cool, could I take you out to dinner? Perhaps
+      tomorrow at Sushi Taku?"
+  - Eden: 1
+    Message: "That sounds lovely, plus that actually happens to be one of my favorite
+      restaurants! It\u2019s a date :)"

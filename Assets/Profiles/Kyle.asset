@@ -18,3 +18,4 @@ MonoBehaviour:
   Distance: 6.9
   ProfilePicture: {fileID: 21300000, guid: 719cd4415bf7a499b874ee8e9ec53de0, type: 3}
   Match: 0
+  ChatData: {fileID: 11400000, guid: 613c4eeb006457c4785142a10de7be39, type: 2}
