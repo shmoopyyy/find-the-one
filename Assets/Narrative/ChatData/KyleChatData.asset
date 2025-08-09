@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84c6ba62d49a91449b4010b26670cc9e, type: 3}
+  m_Name: KyleChatData
+  m_EditorClassIdentifier: 
+  ChatFile: {fileID: 4900000, guid: 52bd0227f97f25d479fee1e3c94e3499, type: 3}
+  OpeningMessage: Hey :) how are you doing today?
+  Messages:
+  - Eden: 1
+    Message: Hey! I am doing good, how about you?
+  - Eden: 0
+    Message: "I\u2019m alright"
+  - Eden: 0
+    Message: "You\u2019re sooo hot by the way"
+  - Eden: 1
+    Message: "Oh thank you! You\u2019re not too bad yourself haha"
+  - Eden: 0
+    Message: "Sorry if this is like weird, but like what\u2019s your ethnicity"
+  - Eden: 1
+    Message: "Oh um I\u2019m latine, why do you ask?"
+  - Eden: 0
+    Message: Oh fuck yea I knew it!! Latinas are always the hottest I swear
+  - Eden: 1
+    Message: Dude wtf is wrong with you
+  - Eden: 0
+    Message: "Hey don\u2019t get all feisty now lol"

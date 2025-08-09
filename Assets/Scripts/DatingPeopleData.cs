@@ -12,6 +12,7 @@ public class DatingPeopleData : ScriptableObject
     public float Distance;
     public Sprite ProfilePicture;
     public bool Match;
+    public ChatData ChatData;
 
     public string GetName()
     {
@@ -41,5 +42,10 @@ public class DatingPeopleData : ScriptableObject
     public bool GetMatchBool() 
     {
         return Match;
+    }
+
+    public ChatData GetChatData()
+    {
+        return ChatData;
     }
 }

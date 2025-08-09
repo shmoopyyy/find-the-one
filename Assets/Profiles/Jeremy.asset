@@ -18,3 +18,4 @@ MonoBehaviour:
   Distance: 1
   ProfilePicture: {fileID: 0}
   Match: 0
+  ChatData: {fileID: 11400000, guid: 9aaa8b6e458240247adf69de9b5445d9, type: 2}
