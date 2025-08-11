@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5d4441a02360721438505cc2126530ae
+guid: 7a9aff170604f2248a2ac71452a4096f
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Montserrat
+  - Baby Doll
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

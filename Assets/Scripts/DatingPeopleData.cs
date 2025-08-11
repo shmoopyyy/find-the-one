@@ -13,6 +13,7 @@ public class DatingPeopleData : ScriptableObject
     public Sprite ProfilePicture;
     public bool Match;
     public ChatData ChatData;
+    public string Reaction;
 
     public string GetName()
     {
@@ -47,5 +48,10 @@ public class DatingPeopleData : ScriptableObject
     public ChatData GetChatData()
     {
         return ChatData;
+    }
+
+    public string GetReaction()
+    {
+        return Reaction;
     }
 }

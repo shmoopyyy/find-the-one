@@ -17,6 +17,7 @@ public class MessagePreview : MonoBehaviour
     public ChatRenderer ChatRenderer;
 
     public List<GameObject> MessageScreenObjects;
+    
 
     void Awake()
     {

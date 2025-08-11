@@ -11,6 +11,8 @@ public class ChatRenderer : MonoBehaviour
     
     public DatingPeopleData DatingPeopleData;
 
+    public TMP_Text EdenText;
+
     [Header("Header")] 
     public Image PFP;
     public TextMeshProUGUI ProfileName;
@@ -122,7 +124,8 @@ public class ChatRenderer : MonoBehaviour
             
             yield return new WaitForSeconds(1);
         }
-        
+
+        EdenReaction();
         GoBackButton.interactable = true;
     }
 
@@ -161,4 +164,8 @@ public class ChatRenderer : MonoBehaviour
         StopAllCoroutines();
     }
 
+    public void EdenReaction()
+    {
+        EdenText.text = DatingPeopleData.Reaction;
+    }
 }

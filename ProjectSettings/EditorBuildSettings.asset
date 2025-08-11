@@ -4,5 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 693e6d0d67e140449af632d1134ab74b
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 70ca6e48b4d3141f4be1e386569a097c
+  - enabled: 1
+    path: Assets/Scenes/JeremyEnding.unity
+    guid: 99346dd1985a47a43be2e3ca94a86bbc
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
